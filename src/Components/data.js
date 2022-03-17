@@ -1,20 +1,21 @@
 export const data = [
   {
-    name: "awais",
+    name: "Awais",
+    batch: "batch-4",
     rollno: 5157,
-    class: "web and mobile development",
-    batch: "batch-04",
+    class: "web and mobile"
   },
   {
-    name: "hamza",
+    name: "Awais",
+    batch: "batch-7",
     rollno: 5158,
-    class: "web and mobile development",
-    batch: "batch-07",
+    class: "web and mobile"
   },
   {
-    name: "Waqas",
+    name: "Awais",
+    batch: "batch-7",
     rollno: 5167,
-    class: "web and mobile development",
-    batch: "batch-07",
+    class: "web and mobile",
   },
 ];
+
