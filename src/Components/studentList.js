@@ -1,9 +1,10 @@
 // 1st method
-function StudentList({ student }) {
+function StudentList({ student, index }) {
   return (
     <div>
       <table>
         <tr>
+          <td>{index}</td>
           <td>{student.name}</td>
           <td>{student.batch}</td>
           <td>{student.rollno}</td>
