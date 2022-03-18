@@ -12,14 +12,13 @@ function Students() {
                     <th>Batch</th>
                     <th>Roll No</th>
                     <th>Class</th>
-                </tr>
+                </tr>0
             </table>
             {
                 students.map((item) => {
                     return <StudentList student={item} />
                 })
             }
-
         </div>
     )
 };

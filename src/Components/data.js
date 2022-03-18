@@ -3,13 +3,13 @@ export const data = [
     name: "Awais",
     batch: "batch-4",
     rollno: 5157,
-    class: "web and mobile"
+    class: "web and mobile",
   },
   {
     name: "Awais",
     batch: "batch-7",
     rollno: 5158,
-    class: "web and mobile"
+    class: "web and mobile",
   },
   {
     name: "Awais",
@@ -18,4 +18,3 @@ export const data = [
     class: "web and mobile",
   },
 ];
-
