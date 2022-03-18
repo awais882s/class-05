@@ -26,6 +26,21 @@ function Students() {
     const inputHandlerClass = (e) => {
         setStdClass(e.target.value);
     }
+    const onClickHandlerSubmit = () => {
+        let student = ({
+            Name,
+            batch,
+            roll,
+            class: stdClass,
+
+        })
+        console.log("New Students Data", student);
+
+        let listOfStudent = students;
+        setStudents(...listOfStudent,);
+
+        // new data add in student list
+    }
     return (
         <div>
             <h1>New Students Add</h1>
@@ -37,7 +52,7 @@ function Students() {
             <input type="number" placeholder="Roll No" onChange={inputHandlerRoll} />
             <h4>New Student Class is:{stdClass}</h4>
             <input type="text" placeholder="Class" onChange={inputHandlerClass} />&nbsp;
-            <button>Submit Data</button>
+            <button onClick={onClickHandlerSubmit}>Submit Data</button>
             <hr />
             <h1>List of Students</h1>
             <table>
