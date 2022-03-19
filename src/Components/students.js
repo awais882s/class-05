@@ -3,10 +3,10 @@ import { data } from "./data";
 import StudentList from "./studentList";
 function Students() {
     const [students, setStudents] = useState(data)
-    const [Name, setName] = useState("");
+    const [name, setName] = useState("");
     const [batch, setBatch] = useState("");
-    const [roll, setRollNo] = useState("");
-    const [stdClass, setStdClass] = useState("");
+    const [rollno, setRollNo] = useState("");
+    const [stuClass, setStuClass] = useState("");
 
     // const inputHandler = (e) => {
     //     console.log("e", e.target.Name);
@@ -24,40 +24,38 @@ function Students() {
     }
 
     const inputHandlerClass = (e) => {
-        setStdClass(e.target.value);
+        setStuClass(e.target.value);
     }
     const onClickHandlerSubmit = () => {
-        let student = ({
-            Name,
+        let student = {
+            name,
             batch,
-            roll,
-            class: stdClass,
+            rollno,
+            class: stuClass,
 
-        })
+        }
         console.log("New Students Data", student);
-
-        let listOfStudent = students;
-        setStudents(...listOfStudent,);
+        setStudents([...students, student]);
 
         // new data add in student list
     }
     return (
         <div>
             <h1>New Students Add</h1>
-            <h4>New Student Name is:{Name}</h4>
+            <h4>New Student Name is:{name}</h4>
             <input type="text" placeholder="Name" onChange={inputHandlerName} />
             <h4>New Student Batch Number is:{batch}</h4>
             <input type="text" placeholder="Batch Number" onChange={inputHandlerBatch} />
-            <h4>New Student Roll Number is:{roll}</h4>
+            <h4>New Student Roll Number is:{rollno}</h4>
             <input type="number" placeholder="Roll No" onChange={inputHandlerRoll} />
-            <h4>New Student Class is:{stdClass}</h4>
+            <h4>New Student Class is:{stuClass}</h4>
             <input type="text" placeholder="Class" onChange={inputHandlerClass} />&nbsp;
             <button onClick={onClickHandlerSubmit}>Submit Data</button>
             <hr />
             <h1>List of Students</h1>
             <table>
                 <tr>
-                    <th>Index</th>
+                    <th>No.</th>
                     <th>Name</th>
                     <th>Batch</th>
                     <th>Roll No</th>
